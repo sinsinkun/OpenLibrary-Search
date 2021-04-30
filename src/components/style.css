@@ -1,0 +1,91 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(200deg, rgb(200,210,220) 0%, rgb(195,200,205) 70%, rgb(150,150,160) 100%);
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  z-index: 20;
+  position: fixed;
+}
+
+/* Main body */
+.main-body {
+  margin-top: 3.5rem;
+}
+
+.card-md {
+  max-width: 760px;
+  width: 70vw;
+}
+
+.card-header > .card-title {
+  margin: 0.3rem 0;
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0.5rem;
+}
+
+@media (max-width:850px) {
+  .card-md {
+    width: 100%;
+  }
+}
+
+.profile-image {
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid rgb(43,47,51);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.img-fluid {
+  border: 1px solid rgb(43,47,51);
+  border-radius: 0.5rem;
+}
+
+.port-link:hover {
+  transform: scale(1.03);
+}
+
+/* Side nav */
+.side-nav {
+  position: fixed;
+  background-color: rgb(43,47,51);
+  height: calc(100vh - 3.5rem);
+  top: 3.5rem;
+  right: 0;
+  max-width: 280px;
+  width: 50vw;
+  z-index: 10;
+  text-align: right;
+  white-space: nowrap;
+  padding: 0.2rem 1rem;
+  animation: sideNavSlide 0.3s;
+} 
+
+.side-nav-close {
+  animation: hideNavSlide 0.3s;
+}
+
+@keyframes sideNavSlide {
+  0% {width: 0; opacity: 0;}
+  100% {width: 50vw; opacity: 1;}
+}
+
+@keyframes hideNavSlide {
+  0% {width: 50vw; opacity: 1;}
+  100% {width: 0; opacity: 0;}
+}
+
+/* Footer */
+footer {
+  z-index: 20;
+}
