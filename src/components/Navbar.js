@@ -8,13 +8,14 @@ function Navbar() {
   return(
     <nav className="navbar navbar-expand navbar-dark bg-dark">
       <div className="container-fluid">
-        <div className="navbar-brand">
-          JingChang Xiao
-        </div>
+        <div className="navbar-brand">Open Library Search Tool</div>
         {store.winX > 780 ? 
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <NavLink exact to="/" className="nav-link" activeClassName="active">Main</NavLink>
+            </li>
+            <li>
+              <NavLink exact to="/instructions" className="nav-link" activeClassName="active">Instructions</NavLink>
             </li>
             <li>
               <NavLink exact to="/err" className="nav-link" activeClassName="active">Other</NavLink>
