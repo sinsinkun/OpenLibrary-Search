@@ -3,7 +3,8 @@ import { createContext, useReducer, useContext, useEffect } from "react";
 const initialData = {
   winX:window.innerWidth, 
   winY:window.innerHeight,
-  rawResults:{}
+  sortedResults:{},
+  resultsPerPage:20
 };
 
 const reducer = (state, action) => {
@@ -11,7 +12,9 @@ const reducer = (state, action) => {
   case "resize":
     return {...state, winX:window.innerWidth, winY:window.innerHeight};
   case "saveResults":
-    return {...state, rawResults:action.data};
+    return {...state, sortedResults:action.data};
+  case "newRPP":
+    return {...state, resultsPerPage:action.data};
   default:
     throw new Error(`Invalid action type: ${action.do}`);
   }

@@ -25,9 +25,6 @@ function Navbar() {
           <li>
             <NavLink exact to="/instructions" className="nav-link" activeClassName="active">Instructions</NavLink>
           </li>
-          <li>
-            <NavLink exact to="/err" className="nav-link" activeClassName="active">404</NavLink>
-          </li>
         </ul> : 
         <button onClick={toggleSideNav}>Menu</button>
       }
@@ -43,10 +40,6 @@ function Navbar() {
         <li>
           <NavLink exact to="/instructions" className="nav-link" activeClassName="active" 
             onClick={toggleSideNav}>Instructions</NavLink>
-        </li>
-        <li>
-          <NavLink exact to="/err" className="nav-link" activeClassName="active" 
-            onClick={toggleSideNav}>Other</NavLink>
         </li>
       </ul>
     </div> 
