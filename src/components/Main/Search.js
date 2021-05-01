@@ -97,8 +97,8 @@ function Search() {
           </div>
           &nbsp;
           <div>
-            <input type="checkbox" id="sortByAlphabet" checked={sortDate} onChange={e => sortByDate(e)} />
-            <label htmlFor="sortByAlphabet">Sort by date of publishing</label>
+            <input type="checkbox" id="sortByPublish" checked={sortDate} onChange={e => sortByDate(e)} />
+            <label htmlFor="sortByPublish">Sort by date of publishing</label>
           </div>
         </div>
       </form>
