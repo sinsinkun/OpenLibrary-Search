@@ -13,6 +13,21 @@ Furthermore, if I were to have access to a server, I would be able to perform a 
 
 The most useful feature that was most recently added to Javascript that I know of is the async function, which allows you to perform operations that may take a long time in the background, while the rest of the script continues to execute.
 
+This, combined with the await keyword, allows synchronous API calling like so:
+```
+async function APICall() {
+
+  // do stuff
+
+  const data = await fetch("someURL").then(r => r.json());
+
+  // any code after will only execute after the fetch has completed
+  // any code outside the async function will execute while the fetch completes
+  // but allows synchronous functionality inside the async function without messy .then(...) chains
+}
+```
+Which makes for more readable API calls that are easier to develop and debug.
+
 
 ### 3. How would you track down a performance issue in production? Have you ever had to do this?
 

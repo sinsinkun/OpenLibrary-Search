@@ -104,13 +104,16 @@ function Search() {
       </form>
       <div className="page-options">
         <span>Number of results per page: </span>
-        <input type="radio" name="resultsPerPage" id="display10" onChange={() => changeResultsPerPage(10)} />
+        <input type="radio" name="resultsPerPage" id="display10" onChange={() => changeResultsPerPage(10)} 
+          defaultChecked={store.resultsPerPage === 10 ? true : false } />
         <label htmlFor="display10">10</label>
         &nbsp;
-        <input type="radio" name="resultsPerPage" id="display20" defaultChecked onChange={() => changeResultsPerPage(20)} />
+        <input type="radio" name="resultsPerPage" id="display20" onChange={() => changeResultsPerPage(20)}
+          defaultChecked={store.resultsPerPage === 20 ? true : false }  />
         <label htmlFor="display20">20</label>
         &nbsp;
-        <input type="radio" name="resultsPerPage" id="display50" onChange={() => changeResultsPerPage(50)} />
+        <input type="radio" name="resultsPerPage" id="display50" onChange={() => changeResultsPerPage(50)} 
+          defaultChecked={store.resultsPerPage === 50 ? true : false }  />
         <label htmlFor="display50">50</label>
       </div>
     </div>
