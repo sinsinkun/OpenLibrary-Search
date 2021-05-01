@@ -31,8 +31,8 @@ function Results() {
   function renderPageSelect() {
     let output = [];
     for (let i=0; i<pages; i++) {
-      if (i === activePage-1) output.push(<span className="active" onClick={() => gotoPage(i+1)}>{i+1}</span>)
-      else output.push(<span onClick={() => gotoPage(i+1)}>{i+1}</span>)
+      if (i === activePage-1) output.push(<button className="active" onClick={() => gotoPage(i+1)}>{i+1}</button>)
+      else output.push(<button onClick={() => gotoPage(i+1)}>{i+1}</button>)
     }
     return output;
   }

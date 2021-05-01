@@ -27,6 +27,10 @@ function Search() {
     searchMsg.current.innerText = "Searching...";
     // convert spaces to +
     const query = title.replace(" ", "+");
+    if (query === "" || query === "+") {
+      searchMsg.current.innerText = "Please enter a search term.";
+      return;
+    }
     // fetch data
     const data = await fetch(`http://openlibrary.org/search.json?q=${query}&page=1`).then(r => r.json())
       .catch(err => {
@@ -81,7 +85,7 @@ function Search() {
     <div className="search-area" onSubmit={e => searchTitle(e)}>
       <form>
         <div className="search-bar">
-          <input type="text" name="search" placeholder="Search for a book" 
+          <input type="text" name="search" placeholder="Search for a book" aria-required="true"
             value={title} onChange={e => setTitle(e.target.value)} />
           <button onClick={searchTitle}>Search</button>
         </div>

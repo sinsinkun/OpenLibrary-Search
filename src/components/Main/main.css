@@ -50,6 +50,13 @@
   justify-content: center;
 }
 
+.search-area .error-msg {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: rgba(0,0,0,0.5);
+  font-weight: 600;
+}
+
 /* Results */
 .results-container .count {
   text-align: center;
@@ -97,13 +104,15 @@
   text-align: center;
 }
 
-.results-container .pages>span {
+.results-container .pages>button {
   cursor: pointer;
-  margin: 0 0.2rem;
+  background: none;
+  border: none;
+  font: inherit;
   color: rgb(48, 67, 78); 
 }
 
-.results-container .pages>span:hover {
+.results-container .pages>button:hover {
   text-decoration: underline;
 }
 
