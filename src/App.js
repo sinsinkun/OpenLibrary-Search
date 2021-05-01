@@ -15,13 +15,13 @@ function App() {
           {/* Navbar */}
           <Navbar />
           {/* Main body */}
-          <div className="main-body" role="main">
+          <main className="main-body" role="main">
             <Switch>
               <Route exact path="/"><Homepage /></Route>
               <Route path="/instructions"><Instructions /></Route>
               <Route><Page404 /></Route>
             </Switch>
-          </div>
+          </main>
           {/* Footer */}
           <Footer />
         </Router>

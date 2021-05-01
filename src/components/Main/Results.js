@@ -16,6 +16,7 @@ function Results() {
       if (store.sortedResults.numFound < 100) numPages = Math.ceil(store.sortedResults.numFound/store.resultsPerPage);
       else numPages = Math.ceil(100/store.resultsPerPage);
       setPages(numPages);
+      setActivePage(1);
       setDisplayed(store.sortedResults.docs.slice(0,store.resultsPerPage));
     }
   }, [store.sortedResults, store.resultsPerPage])
@@ -42,7 +43,7 @@ function Results() {
       {numResults === -1 ? "" : 
         <div className="count">Number of results: {numResults > 100 ? "100+" : numResults}</div>
       }
-      <div className="results" role="region" aria-labelledby="search results">
+      <div className="results" role="region">
         {displayed.map((result, i) =>
           <div className="entry" key={"display-" + i}>
             <span class="cover">{result.cover_i ? 
