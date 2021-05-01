@@ -2,7 +2,7 @@
 
 ### 1. How long did you spend on the coding assignment?
 
-I spent roughly a day on this assignment, or 10-12 hours in total. If I had more time, I would work on a more robust version of the app that pulled additional results after browsing past the first 100 entries (the API only pulls the first 100 results, and requires an additional query with &page=# to get more).
+I spent roughly a day on this assignment, or 10-12 hours in total on conceptualizing and developing the app, then 3-4 hours on debugging and refactoring for WCAG compliance. If I had more time, I would work on a more robust version of the app that pulled additional results after browsing past the first 100 entries (the API only pulls the first 100 results, and requires an additional query with &page=# to get more).
 
 This would also necessitate a more complex page selection system on our app, that "scrolls" page numbers as you move into larger quantities of pages. It may also be beneficial to track page changes through the browser history, which also allows the possibility of quick page traversal via the URL rather than only through the UI.
 
