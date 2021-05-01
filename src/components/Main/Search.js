@@ -32,7 +32,7 @@ function Search() {
       return;
     }
     // fetch data
-    const data = await fetch(`https://openlibrary.org/search.json?q=${query}&page=1`).then(r => r.json())
+    const data = await fetch(`https://openlibrary.org/search.json?q=${query}`).then(r => r.json())
       .catch(err => {
         console.log(err);
         searchMsg.current.innerText = "Error: Something went wrong with your search";
