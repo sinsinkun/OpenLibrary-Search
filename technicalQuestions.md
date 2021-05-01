@@ -2,9 +2,11 @@
 
 ### 1. How long did you spend on the coding assignment?
 
-I spent roughly a day on this assignment, or 10-12 hours in total on conceptualizing and developing the app, then 3-4 hours on debugging and refactoring for WCAG compliance. If I had more time, I would work on a more robust version of the app that pulled additional results after browsing past the first 100 entries (the API only pulls the first 100 results, and requires an additional query with &page=# to get more).
+I spent roughly a day on this assignment, or 10-12 hours in total on conceptualizing and developing the app, then 3-4 hours on debugging and refactoring for WCAG compliance. If I had more time, I would definitely improve on the UI and polish up the visual aspects of the app. I didn't really know what kind of theme to follow, so it looks a little plain and generic.
 
-This would also necessitate a more complex page selection system on our app, that "scrolls" page numbers as you move into larger quantities of pages. It may also be beneficial to track page changes through the browser history, which also allows the possibility of quick page traversal via the URL rather than only through the UI.
+In terms of functionality, I would work on a more robust version of the app that pulled additional results after browsing past the first 100 entries (the API only pulls the first 100 results, and requires an additional query with &page=# to get more).
+
+This would also necessitate a more complex page selection system on the app, that "scrolls" page numbers as you move into larger quantities of pages. It may also be beneficial to track page changes through the browser history, which allows the possibility of quick page traversal via the URL rather than only through the UI.
 
 Furthermore, if I were to have access to a server, I would be able to perform a more robust sort by retrieving **all** entries for a given query and sorting them all at once, rather than only being able to sort based on the first 100 entries. This would require a server because certain queries can produce hundreds of thousands of results, which would be too much computation to expect the client to handle. A server would also open up the opportunity to lazy load, sending only the first few pages worth of data to the client while it takes its time sorting the entire fetch request from Open Library, then accessing the rest as needed without additional calls to the Open Library API.
 
