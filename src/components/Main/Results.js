@@ -42,7 +42,7 @@ function Results() {
       {numResults === -1 ? "" : 
         <div className="count">Number of results: {numResults > 100 ? "100+" : numResults}</div>
       }
-      <div className="results">
+      <div className="results" role="region" aria-labelledby="search results">
         {displayed.map((result, i) =>
           <div className="entry" key={"display-" + i}>
             <span class="cover">{result.cover_i ? 
