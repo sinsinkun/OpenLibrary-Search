@@ -20,6 +20,15 @@ function Instructions() {
         <li>Sort results by more recently published</li>
         <li>Any other functionality you feel will make this app a better experience</li>
       </ul>
+      <p>Requirements:</p>
+      <ul>
+        <li>Code should compile and run in 1 step</li>
+        <li>No UI Library</li>
+        <li>Follows WCAG 2.0 AA</li>
+        <li>Perform well in lighthouse audit</li>
+        <li>Host on heroku/firebase/github</li>
+        <li>Technical questions .md</li>
+      </ul>
     </div>
   )
 }
