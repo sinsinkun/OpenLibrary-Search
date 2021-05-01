@@ -1,5 +1,5 @@
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-import { StoreProvider } from './components/GlobalStore';
+import { StoreProvider } from './components/redux';
 import './App.css';import './App.css';
 import Page404 from './components/Page404';
 import Navbar from './components/Navbar';

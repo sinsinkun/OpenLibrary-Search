@@ -3,12 +3,15 @@ import { createContext, useReducer, useContext, useEffect } from "react";
 const initialData = {
   winX:window.innerWidth, 
   winY:window.innerHeight,
+  rawResults:{}
 };
 
 const reducer = (state, action) => {
   switch (action.do) {
   case "resize":
     return {...state, winX:window.innerWidth, winY:window.innerHeight};
+  case "saveResults":
+    return {...state, rawResults:action.data};
   default:
     throw new Error(`Invalid action type: ${action.do}`);
   }

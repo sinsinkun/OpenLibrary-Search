@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useStoreContext } from './GlobalStore';
+import { useStoreContext } from './redux';
 
 function Navbar() {
 

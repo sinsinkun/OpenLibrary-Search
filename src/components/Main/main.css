@@ -2,37 +2,44 @@
   margin-top: 1rem;
   padding: 0.5rem;
   text-align: center;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.2);
 }
 
-.search-area>.search-entry {
+.search-bar {
+  margin-bottom: 0.5rem;
+}
+
+.search-bar>input {
+  width: 60%;
   background-color: rgba(255,255,255,0.8);
   border: 1px solid white;
   border-right: none;
-  padding: 0.5rem;
+  padding: 0.7rem;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
-.search-area>.search-entry:focus {
+.search-bar>input:focus {
   outline: none;
   box-shadow: 0 0 5px black;
 }
 
-.search-area>button {
+.search-bar>button {
+  width: 10%;
+  min-width: 70px;
   background-color: rgba(255,255,255,0.8);
   border: 1px solid white;
-  padding: 0.5rem;
+  padding: 0.7rem;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-.search-area>button:hover {
+.search-bar>button:hover {
   cursor: pointer;
   background-color: rgba(255,255,255,0.9);
 }
 
-.search-area>button:focus {
+.search-bar>button:focus {
   outline: none;
   box-shadow: 0 0 5px black;
 }
