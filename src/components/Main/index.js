@@ -1,13 +1,14 @@
 import Search from "./Search";
 import Results from './Results';
+import './main.css';
 
 function Homepage() {
 
   return(
-    <div className="my-3">
+    <>
       <Search />
       <Results />
-    </div>
+    </>
   )
 }
 
