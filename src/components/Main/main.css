@@ -89,14 +89,39 @@
 
 .results-container .results .entry {
   margin: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .results-container .results .entry>.cover {
-  display: block;
   padding: 10px;
   background-color: rgba(0,0,0,0.1);
   height: 200px;
   width: fit-content;
+}
+
+.results-container .results .entry>p {
+  margin: 0.2rem 0;
+}
+
+.results-container .results .title {
+  font-weight: 600;
+  position: relative;
+}
+
+.results-container .results .fullname {
+  visibility:hidden;
+  position: absolute;
+  display: block;
+  background-color: rgb(163, 172, 177);
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.results-container .results .title:hover .fullname {
+  visibility: visible;
 }
 
 .results-container .pages {

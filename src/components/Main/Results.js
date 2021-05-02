@@ -32,8 +32,8 @@ function Results() {
   function renderPageSelect() {
     let output = [];
     for (let i=0; i<pages; i++) {
-      if (i === activePage-1) output.push(<button className="active" onClick={() => gotoPage(i+1)}>{i+1}</button>)
-      else output.push(<button onClick={() => gotoPage(i+1)}>{i+1}</button>)
+      if (i === activePage-1) output.push(<button key={"page-select-" + i} className="active" onClick={() => gotoPage(i+1)}>{i+1}</button>)
+      else output.push(<button key={"page-select-" + i} onClick={() => gotoPage(i+1)}>{i+1}</button>)
     }
     return output;
   }
@@ -46,15 +46,17 @@ function Results() {
       <div className="results" role="region">
         {displayed.map((result, i) =>
           <div className="entry" key={"display-" + i}>
-            <span class="cover">{result.cover_i ? 
+            <div className="cover">{result.cover_i ? 
               <img src={`http://covers.openlibrary.org/b/id/${result.cover_i}-M.jpg`} 
                 alt={`${result.title} cover`} height="100%" />
               : "(No cover available)"
-            }</span>
-            <span>{result.title}, <br/> by {result.author_name || "(Author unknown)"}</span>
-            <br/>
-            <span>Published {result.first_publish_year || "(Publish date unknown)"}</span>
-            <br/>
+            }</div>
+            <p className="title">
+              {result.title.length < 53 ? result.title : result.title.slice(0,50) + "..."}
+              {result.title.length < 53 ? "" : <span className="fullname">{result.title}</span>}
+            </p>
+            <p>by {Array.isArray(result.author_name) ? result.author_name[0] : result.author_name || "(Unknown)"}</p>
+            <p>Published in {result.first_publish_year || "(Unknown)"}</p>
             <a href={"https://openlibrary.org" + result.seed[0]} target="_blank" rel="noreferrer">
               Link to entry
             </a>
